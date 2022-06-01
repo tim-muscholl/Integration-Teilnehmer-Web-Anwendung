@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>de.hdbw.integration</groupId>
+    <artifactId>Teilnehmer-Web-Anwendung</artifactId>
+    <version>1.0</version>
+  </parent>
+  
+  <groupId>de.hdbw.integration.jaxrs.client</groupId>
+  <artifactId>Teilnehmer-JaxRS-Client</artifactId>
+  <name>Teilnehmer-JaxRS-Client</name>
+  <packaging>jar</packaging>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+  	<jersey.version>1.19</jersey.version>
+  </properties>
+  <dependencies>
+  
+  	<!-- JSON 2 JAVA and vice versa -->
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.4</version>
+    </dependency>
+	
+	<!-- PACT Test https://www.sigs-datacom.de/uploads/tx_dmjournals/vitz_JS_04_16_TaTZ.pdf
+	<dependency>
+	    <groupId>au.com.dius</groupId>
+	    <artifactId>pact-jvm-consumer-junit_2.11</artifactId>
+	    <version>3.5.0</version>
+	    <scope>test</scope>
+	</dependency>  
+	 -->  
+	<dependency>
+	    <groupId>au.com.dius</groupId>
+	    <artifactId>pact-jvm-consumer-junit_2.12</artifactId>
+	    <version>3.6.13</version>
+	    <scope>test</scope>
+	</dependency>
+    
+    <dependency>
+		<groupId>javax.ws.rs</groupId>
+		<artifactId>javax.ws.rs-api</artifactId>
+		<version>2.1.1</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+	<dependency>
+	    <groupId>org.glassfish.jersey.core</groupId>
+	    <artifactId>jersey-client</artifactId>
+	    <version>2.29</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.glassfish.jersey.inject</groupId>
+	    <artifactId>jersey-hk2</artifactId>
+	    <version>2.29</version>
+	</dependency>	
+	
+	<!-- https://howtodoinjava.com/resteasy/solved-java-lang-classnotfoundexception-org-glassfish-jersey-client-jerseyclientbuilder/ 
+	<dependency>
+	    <groupId>org.jboss.resteasy</groupId>
+	    <artifactId>resteasy-client</artifactId>
+	    <version>3.0.7.Final</version>
+	</dependency>-->
+ 	<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client 
+	<dependency>
+	    <groupId>org.jboss.resteasy</groupId>
+	    <artifactId>resteasy-client</artifactId>
+	    <version>4.1.1.Final</version>
+	</dependency>
+    -->
+    
+  	<!-- Alternative Jersey-Impl.  
+  		Wichtig: Diese Abhaengigkeit hinter den org.glassfish.jersey.core/jersey-client
+  		stellen.
+  	-->
+  	<dependency>
+  		<groupId>com.sun.jersey</groupId>
+  		<artifactId>jersey-client</artifactId>
+  		<version>${jersey.version}</version>
+  	</dependency>
+
+  </dependencies>
+  
+	<!-- By default, Pact files will be generated in the target/pacts folder. 
+		To customize this path, we can configure the maven-surefire-plugin
+	 -->
+	<build>
+		<plugins>
+			  <plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+				  <version>3.0.0-M6</version>
+			    <configuration>
+			        <systemPropertyVariables>
+			            <pact.rootDir>target/mypacts</pact.rootDir>
+			        </systemPropertyVariables>
+			    </configuration>
+			  </plugin>
+		</plugins>
+	</build>
+  
+</project>

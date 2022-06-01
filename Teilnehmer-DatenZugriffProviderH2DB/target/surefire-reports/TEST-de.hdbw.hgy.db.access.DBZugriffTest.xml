@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="de.hdbw.hgy.db.access.DBZugriffTest" time="2.344" tests="5" errors="5" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="12"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\_HG\__2019-HDBW\_JavaPlattform\eclipse-2019-3-ee\_Maven_Projekte\Teilnehmer-Web-Anwendung\Teilnehmer-DatenZugriffProviderH2DB\target\test-classes;C:\_HG\__2019-HDBW\_JavaPlattform\eclipse-2019-3-ee\_Maven_Projekte\Teilnehmer-Web-Anwendung\Teilnehmer-DatenZugriffProviderH2DB\target\classes;C:\Users\yangh\.m2\repository\org\eclipse\persistence\eclipselink\2.7.4\eclipselink-2.7.4.jar;C:\Users\yangh\.m2\repository\org\eclipse\persistence\jakarta.persistence\2.2.2\jakarta.persistence-2.2.2.jar;C:\Users\yangh\.m2\repository\org\eclipse\persistence\commonj.sdo\2.1.1\commonj.sdo-2.1.1.jar;C:\Users\yangh\.m2\repository\org\wildfly\jipijapa-eclipselink\17.0.1.Final\jipijapa-eclipselink-17.0.1.Final.jar;C:\Users\yangh\.m2\repository\org\wildfly\jipijapa-spi\17.0.1.Final\jipijapa-spi-17.0.1.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\yangh\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\yangh\.m2\repository\javax\enterprise\cdi-api\2.0.SP1\cdi-api-2.0.SP1.jar;C:\Users\yangh\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\yangh\.m2\repository\org\jboss\logging\jboss-logging\3.4.0.Final\jboss-logging-3.4.0.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.3_spec\1.0.1.Final\jboss-annotations-api_1.3_spec-1.0.1.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\jboss-vfs\3.2.14.Final\jboss-vfs-3.2.14.Final.jar;C:\Users\yangh\.m2\repository\de\hdbw\integration\db\access\Teilnehmer-DatenZugriffModule\1.0\Teilnehmer-DatenZugriffModule-1.0.jar;C:\Users\yangh\.m2\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar;C:\Users\yangh\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\yangh\.m2\repository\com\h2database\h2\1.4.199\h2-1.4.199.jar;C:\Users\yangh\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\yangh\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="12"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="DE"/>
+    <property name="sun.boot.library.path" value="C:\_HG\__2019-HDBW\_JavaPlattform\jdk-12.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\yangh\AppData\Local\Temp\surefire18419128709700378906\surefirebooter15432533575567766008.jar C:\Users\yangh\AppData\Local\Temp\surefire18419128709700378906 2019-08-23T14-20-32_917-jvmRun1 surefire8895706090929727295tmp surefire_013838397289592880263tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\_HG\__2019-HDBW\_JavaPlattform\eclipse-2019-3-ee\_Maven_Projekte\Teilnehmer-Web-Anwendung\Teilnehmer-DatenZugriffProviderH2DB\target\test-classes;C:\_HG\__2019-HDBW\_JavaPlattform\eclipse-2019-3-ee\_Maven_Projekte\Teilnehmer-Web-Anwendung\Teilnehmer-DatenZugriffProviderH2DB\target\classes;C:\Users\yangh\.m2\repository\org\eclipse\persistence\eclipselink\2.7.4\eclipselink-2.7.4.jar;C:\Users\yangh\.m2\repository\org\eclipse\persistence\jakarta.persistence\2.2.2\jakarta.persistence-2.2.2.jar;C:\Users\yangh\.m2\repository\org\eclipse\persistence\commonj.sdo\2.1.1\commonj.sdo-2.1.1.jar;C:\Users\yangh\.m2\repository\org\wildfly\jipijapa-eclipselink\17.0.1.Final\jipijapa-eclipselink-17.0.1.Final.jar;C:\Users\yangh\.m2\repository\org\wildfly\jipijapa-spi\17.0.1.Final\jipijapa-spi-17.0.1.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\yangh\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\yangh\.m2\repository\javax\enterprise\cdi-api\2.0.SP1\cdi-api-2.0.SP1.jar;C:\Users\yangh\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\yangh\.m2\repository\org\jboss\logging\jboss-logging\3.4.0.Final\jboss-logging-3.4.0.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.3_spec\1.0.1.Final\jboss-annotations-api_1.3_spec-1.0.1.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\yangh\.m2\repository\org\jboss\jboss-vfs\3.2.14.Final\jboss-vfs-3.2.14.Final.jar;C:\Users\yangh\.m2\repository\de\hdbw\integration\db\access\Teilnehmer-DatenZugriffModule\1.0\Teilnehmer-DatenZugriffModule-1.0.jar;C:\Users\yangh\.m2\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar;C:\Users\yangh\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\yangh\.m2\repository\com\h2database\h2\1.4.199\h2-1.4.199.jar;C:\Users\yangh\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\yangh\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\yangh"/>
+    <property name="user.language" value="de"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2019-04-16"/>
+    <property name="java.home" value="C:\_HG\__2019-HDBW\_JavaPlattform\jdk-12.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\_HG\__2019-HDBW\_JavaPlattform\eclipse-2019-3-ee\_Maven_Projekte\Teilnehmer-Web-Anwendung\Teilnehmer-DatenZugriffProviderH2DB"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\yangh\AppData\Local\Temp\surefire18419128709700378906\surefirebooter15432533575567766008.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="12.0.1+12"/>
+    <property name="user.name" value="yangh"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\yangh\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\yangh\AppData\Local\Temp\"/>
+    <property name="java.version" value="12.0.1"/>
+    <property name="user.dir" value="C:\_HG\__2019-HDBW\_JavaPlattform\eclipse-2019-3-ee\_Maven_Projekte\Teilnehmer-Web-Anwendung\Teilnehmer-DatenZugriffProviderH2DB"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\_HG\__2019-HDBW\_JavaPlattform\jdk-12.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/__PROJEKTE/___java/jdk-12.0.2/bin/server;C:/__PROJEKTE/___java/jdk-12.0.2/bin;C:\__PROJEKTE\___java\jdk-12.0.2\bin;C:\Oracle\oraclexe\app\oracle\product\11.2.0\server\bin;C:\_PROJEKTE\apache-maven-3.5.4\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\SysWOW64\Empirum;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\_PROJEKTE\apache-ant-1.9.4\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs\;C:\Users\yangh\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\yangh\AppData\Local\Programs\Python\Python37-32\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\yangh\AppData\Roaming\npm;C:\_HG\__2019-HDBW\_JavaPlattform\eclipse-2019-3-ee\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="12.0.1+12"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="56.0"/>
+  </properties>
+  <testcase name="insert_update_check" classname="de.hdbw.hgy.db.access.DBZugriffTest" time="2.261">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at de.hdbw.hgy.db.access.DBZugriffTest.insert_update_check(DBZugriffTest.java:44)
+</error>
+    <system-out><![CDATA[INSERT: Yiyi ZhangS1 ist Teilnehmer des Kurses KeinKurs als Regisseur
+]]></system-out>
+    <system-err><![CDATA[Datenbank-Fehler: Verbindung ist unterbrochen: "java.net.ConnectException: Connection refused: connect: localhost"
+Connection is broken: "java.net.ConnectException: Connection refused: connect: localhost" [90067-199]
+]]></system-err>
+  </testcase>
+  <testcase name="searchUsers" classname="de.hdbw.hgy.db.access.DBZugriffTest" time="0.009">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at de.hdbw.hgy.db.access.DBZugriffTest.searchUsers(DBZugriffTest.java:60)
+</error>
+    <system-out><![CDATA[SEARCH QUERY: Yi Zhang ist Teilnehmer des Kurses  als null
+]]></system-out>
+  </testcase>
+  <testcase name="getUserById" classname="de.hdbw.hgy.db.access.DBZugriffTest" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at de.hdbw.hgy.db.access.DBZugriffTest.getUserById(DBZugriffTest.java:69)
+</error>
+  </testcase>
+  <testcase name="searchAllUsers" classname="de.hdbw.hgy.db.access.DBZugriffTest" time="0.002">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at de.hdbw.hgy.db.access.DBZugriffTest.searchAllUsers(DBZugriffTest.java:77)
+</error>
+    <system-out><![CDATA[SEARCH QUERY:   ist Teilnehmer des Kurses  als null
+]]></system-out>
+  </testcase>
+  <testcase name="insert_read_check" classname="de.hdbw.hgy.db.access.DBZugriffTest" time="0.002">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at de.hdbw.hgy.db.access.DBZugriffTest.insert_read_check(DBZugriffTest.java:31)
+</error>
+    <system-out><![CDATA[INSERT: Hallo Halli ist Teilnehmer des Kurses EinKurs als EineRolle
+]]></system-out>
+  </testcase>
+</testsuite>

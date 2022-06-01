@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Teilnehmer-JaxRS-Service:war">
+    <output-path>$PROJECT_DIR$/Teilnehmer-JaxRS-Service/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Teilnehmer-JaxRS-Service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Teilnehmer-JaxRS-Service.war">
+      <element id="artifact" artifact-name="Teilnehmer-JaxRS-Service:war exploded" />
+    </root>
+  </artifact>
+</component>

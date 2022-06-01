@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Teilnehmer-DatenZugriffModule/Teilnehmer-DatenZugriffModule.iml" filepath="$PROJECT_DIR$/Teilnehmer-DatenZugriffModule/Teilnehmer-DatenZugriffModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Teilnehmer-DatenZugriffProviderMangoDB/Teilnehmer-DatenZugriffProviderMangoDB.iml" filepath="$PROJECT_DIR$/Teilnehmer-DatenZugriffProviderMangoDB/Teilnehmer-DatenZugriffProviderMangoDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Teilnehmer-JaxRS-Client/Teilnehmer-JaxRS-Client.iml" filepath="$PROJECT_DIR$/Teilnehmer-JaxRS-Client/Teilnehmer-JaxRS-Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Teilnehmer-JaxRS-Service/Teilnehmer-JaxRS-Service.iml" filepath="$PROJECT_DIR$/Teilnehmer-JaxRS-Service/Teilnehmer-JaxRS-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Teilnehmer-Web-Anwendung.iml" filepath="$PROJECT_DIR$/Teilnehmer-Web-Anwendung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Teilnehmer-Web-Primefaces/Teilnehmer-Web-Primefaces.iml" filepath="$PROJECT_DIR$/Teilnehmer-Web-Primefaces/Teilnehmer-Web-Primefaces.iml" />
+    </modules>
+  </component>
+</project>

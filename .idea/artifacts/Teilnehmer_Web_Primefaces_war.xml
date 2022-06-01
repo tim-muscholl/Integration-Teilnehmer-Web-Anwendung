@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Teilnehmer-Web-Primefaces:war">
+    <output-path>$PROJECT_DIR$/Teilnehmer-Web-Primefaces/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Teilnehmer-Web-Primefaces</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Teilnehmer-Web-Primefaces-1.0.war">
+      <element id="artifact" artifact-name="Teilnehmer-Web-Primefaces:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,54 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Teilnehmer-Web-Primefaces:war exploded">
+    <output-path>$PROJECT_DIR$/Teilnehmer-Web-Primefaces/target/Teilnehmer-Web-Primefaces-1.0</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>Teilnehmer-Web-Primefaces</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Teilnehmer-Web-Primefaces" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="Teilnehmer-JaxRS-Client-1.0.jar">
+            <element id="module-output" name="Teilnehmer-JaxRS-Client" />
+          </element>
+          <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.1.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-client:2.29" />
+          <element id="library" level="project" name="Maven: jakarta.ws.rs:jakarta.ws.rs-api:2.1.5" />
+          <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-common:2.29" />
+          <element id="library" level="project" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.4" />
+          <element id="library" level="project" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.3" />
+          <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.hk2.external:jakarta.inject:2.5.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.jersey.inject:jersey-hk2:2.29" />
+          <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-locator:2.5.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-api:2.5.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-utils:2.5.0" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.22.0-CR2" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-client:1.19" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.19" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:jsr311-api:1.1.1" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.4" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.1.11" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.1.11" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:el-impl:2.2" />
+          <element id="library" level="project" name="Maven: javax.el:el-api:2.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Teilnehmer-Web-Primefaces/target/Teilnehmer-Web-Primefaces-1.0/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Teilnehmer-Web-Primefaces/web/Web" />
+    </root>
+  </artifact>
+</component>

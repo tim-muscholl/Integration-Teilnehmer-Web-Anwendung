@@ -1,0 +1,52 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Teilnehmer-JaxRS-Service:war exploded">
+    <output-path>$PROJECT_DIR$/Teilnehmer-JaxRS-Service/target/Teilnehmer-JaxRS-Service</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>Teilnehmer-JaxRS-Service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Teilnehmer-JaxRS-Service" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="Teilnehmer-DatenZugriffModule-1.0.jar">
+            <element id="module-output" name="Teilnehmer-DatenZugriffModule" />
+          </element>
+          <element id="archive" name="Teilnehmer-DatenZugriffProviderMangoDB-1.0.jar">
+            <element id="module-output" name="Teilnehmer-DatenZugriffProviderMangoDB" />
+          </element>
+          <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:3.4.1" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.24" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.9" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.9" />
+          <element id="library" level="project" name="Maven: org.fusesource.jansi:jansi:1.18" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-servlet:1.19" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-server:1.19" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-json:1.19" />
+          <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.1" />
+          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.3-1" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2.2" />
+          <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.2" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.2" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.9.2" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-xc:1.9.2" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.19" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:jsr311-api:1.1.1" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-client:1.19" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Teilnehmer-JaxRS-Service/target/Teilnehmer-JaxRS-Service/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Teilnehmer-JaxRS-Service/web/Web" />
+    </root>
+  </artifact>
+</component>

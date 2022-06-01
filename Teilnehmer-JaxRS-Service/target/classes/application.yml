@@ -1,0 +1,17 @@
+spring:
+  main:
+    web-application-type: none
+    
+---
+server:
+  port: 8888
+
+logging:
+  level:
+    org.springframework: ERROR
+    com.mkyong: DEBUG
+
+
+email: yaml@mkyong.com
+thread-pool: 10
+

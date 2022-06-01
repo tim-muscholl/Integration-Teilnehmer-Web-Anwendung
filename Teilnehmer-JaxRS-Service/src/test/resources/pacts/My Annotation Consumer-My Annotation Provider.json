@@ -1,0 +1,29 @@
+{
+  "provider": {
+    "name": "My Annotation Provider"
+  },
+  "consumer": {
+    "name": "My Annotation Consumer"
+  },
+  "interactions": [
+    {
+      "description": "a root request",
+      "request": {
+        "method": "GET",
+        "path": "/"
+      },
+      "response": {
+        "status": 200,
+        "body": "Hello, world anno!"
+      }
+    }
+  ],
+  "metadata": {
+    "pact-specification": {
+      "version": "3.0.0"
+    },
+    "pact-jvm": {
+      "version": "3.5.0"
+    }
+  }
+}

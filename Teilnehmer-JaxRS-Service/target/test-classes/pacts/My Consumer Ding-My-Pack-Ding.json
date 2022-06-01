@@ -1,0 +1,29 @@
+{
+  "provider": {
+    "name": "My-Pack-Ding"
+  },
+  "consumer": {
+    "name": "My Consumer Ding"
+  },
+  "interactions": [
+    {
+      "description": "a root request",
+      "request": {
+        "method": "GET",
+        "path": "/"
+      },
+      "response": {
+        "status": 200,
+        "body": "Hello, world ding!"
+      }
+    }
+  ],
+  "metadata": {
+    "pact-specification": {
+      "version": "3.0.0"
+    },
+    "pact-jvm": {
+      "version": "3.5.0"
+    }
+  }
+}

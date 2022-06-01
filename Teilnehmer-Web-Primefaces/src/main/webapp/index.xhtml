@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    </h:head>
+ 
+    <h:body>    
+		<style type="text/css">
+		    .logo {
+		        width: 5%
+		    }		     
+		    .detail {
+		        width: 95%;
+		        padding-left: 25px;
+		    }		     
+		    .detail td {
+		        font-size: 16px;
+		    }		     
+		    .ui-datascroller .ui-datascroller-item {
+		        border-bottom: 1px solid #A8A8A8;
+		        padding: 25px 10px;
+		        /* with the exported variables from Nova and Luna Themes*/
+		        border-bottom-color: var(--input-border-color, #A8A8A8);
+		    }
+		</style> 
+ 
+		<h:form id="form"> 
+		    <p:toolbar>
+		        <f:facet name="left">
+		            <p:commandButton type="button" value="Neu" icon="pi pi-file" 
+		            	update=":form:teilnehmerErfassenDetail" onclick="PF('teilnehmerErfassenDialog').show()" title="Teilnehmer Erfassen Detail" />
+		 
+		            <p:commandButton type="button" value="Suche" icon="pi pi-folder-open"
+		            	update=":form:scroller" onclick="PF('teilnehmerSuchenDialog').show()" title="Teilnehmer Suchen Detail" />
+		 
+		            <span class="ui-separator">
+		                <span class="ui-icon pi pi-ellipsis-v" />
+		            </span>
+		        </f:facet>
+		 
+		        <f:facet name="right">
+		            <p:menuButton value="Options">
+		                <p:menuitem value="Alle Teilnehmer" action="#{dataScrollerView.init}" update=":form:scroller" icon="pi pi-refresh" />
+		                <p:menuitem value="HDBW Homepage" url="https://www.hdbw-hochschule.de/" icon="pi pi-home" />
+		            </p:menuButton>
+		        </f:facet>
+		    </p:toolbar>     
+		    
+		    <p:dataScroller id="scroller" value="#{dataScrollerView.teilnehmer}" var="teilnehmer" chunkSize="10">
+		        <f:facet name="header">
+		            Scrollen nach unten, um mehr Teilnehmer zu laden
+		        </f:facet>
+		 
+		        <h:panelGrid columns="3" style="width:100%" columnClasses="logo,detail">
+		            <p:graphicImage name="demo/images/teilnehmer/#{teilnehmer.id}-big.gif" /> 
+		 
+		            <p:outputPanel>
+		                <h:panelGrid columns="2" cellpadding="5">
+		                    <h:outputText value="Id:" />
+		                    <h:outputText value="#{teilnehmer.id}" style="font-weight: bold"/>
+		 
+		                    <h:outputText value="Nachname:" />
+		                    <h:outputText value="#{teilnehmer.nachname}" style="font-weight: bold"/>
+		 
+		                    <h:outputText value="Vorname:" />
+		                    <h:outputText value="#{teilnehmer.vorname}" style="font-weight: bold"/>
+		 
+		                    <h:outputText value="Kurs:" />
+		                    <h:outputText value="#{teilnehmer.kurs}" style="font-weight: bold"/>
+		 
+		                    <h:outputText value="Rolle:" />
+		                    <h:outputText value="#{teilnehmer.rolle}" style="font-weight: bold"/>
+		                </h:panelGrid>
+
+		            </p:outputPanel>
+		            <p:outputPanel>
+		                <p:commandLink update=":form:teilnehmerAendernDetail" oncomplete="PF('teilnehmerAendernDialog').show()" title="Ändern Detail">
+		                    <!-- 
+		                    <h:outputText styleClass="ui-icon pi pi-search" style="margin:0 auto;" />
+		                     -->
+		                    <h:outputText value="Ändern" />
+		                    <f:setPropertyActionListener value="#{teilnehmer}" target="#{dataScrollerView.selectedTeilnehmer}" />
+		                </p:commandLink>
+		            </p:outputPanel>	
+		        </h:panelGrid>
+		    </p:dataScroller>
+		    
+		    <p:dialog header="Teilnehmer Ändern" widgetVar="teilnehmerAendernDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+		        <p:outputPanel id="teilnehmerAendernDetail" style="text-align:center;">
+		            <p:panelGrid columns="2" rendered="#{not empty dataScrollerView.selectedTeilnehmer}" columnClasses="label,value">
+		                <h:outputText value="Id:" />
+		                <h:outputText value="#{dataScrollerView.selectedTeilnehmer.id}" />
+		 
+		                <h:outputText value="Passwort" />
+		                <h:inputSecret value="#{dataScrollerView.selectedTeilnehmer.passwort}" />
+		 
+		                <h:outputText value="Nachname:" />
+		                <h:inputText value="#{dataScrollerView.selectedTeilnehmer.nachname}" />
+		 
+		                <h:outputText value="Vorname:" />
+		                <h:inputText value="#{dataScrollerView.selectedTeilnehmer.vorname}" />
+		 
+		                <h:outputText value="Kurs:" />
+		                <h:inputText value="#{dataScrollerView.selectedTeilnehmer.kurs}" />
+		 
+		                <h:outputText value="Rolle:" />
+		                <h:inputText value="#{dataScrollerView.selectedTeilnehmer.rolle}" />		                
+		            </p:panelGrid>
+		            	                
+		            <p:panelGrid styleClass="ui-noborder" columns="2" rendered="#{not empty dataScrollerView.selectedTeilnehmer}" >
+		            	<h:commandButton type="submit" value="Abbrechen" action="#{dataScrollerView.cancelSelectedTeilnehmer}" />
+		            	<h:commandButton type="submit" value="Ändern" action="#{dataScrollerView.saveSelectedTeilnehmer}" />
+		            </p:panelGrid>		                
+		        </p:outputPanel>
+		    </p:dialog>
+		    
+		    <p:dialog header="Teilnehmer erfassen" widgetVar="teilnehmerErfassenDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+		        <p:outputPanel id="teilnehmerErfassenDetail" style="text-align:center;">
+		            <p:panelGrid columns="2" rendered="#{not empty dataScrollerView.newTeilnehmer}" columnClasses="label,value">
+		 
+		                <h:outputText value="Passwort" />
+		                <h:inputSecret value="#{dataScrollerView.newTeilnehmer.passwort}" label="Passwort"  />
+		 
+		                <h:outputText value="Nachname:" />
+		                <h:inputText value="#{dataScrollerView.newTeilnehmer.nachname}" label="Nachname"  />
+		 
+		                <h:outputText value="Vorname:" />
+		                <h:inputText value="#{dataScrollerView.newTeilnehmer.vorname}" label="Vorname"  />
+		 
+		                <h:outputText value="Kurs:" />
+		                <h:inputText value="#{dataScrollerView.newTeilnehmer.kurs}" label="Kurs"  />
+		 
+		                <h:outputText value="Rolle:" />
+		                <h:inputText value="#{dataScrollerView.newTeilnehmer.rolle}" label="Rolle"  />		                
+		            </p:panelGrid>
+		            	                
+		            <p:panelGrid styleClass="ui-noborder" columns="2" rendered="#{not empty dataScrollerView.newTeilnehmer}" >
+		            	<h:commandButton type="submit" value="Abbrechen" action="#{dataScrollerView.cancelNewTeilnehmer}" />
+		            	<h:commandButton type="submit" value="Speichern" action="#{dataScrollerView.saveNewTeilnehmer}" />
+		            </p:panelGrid>		                
+		        </p:outputPanel>
+		    </p:dialog>
+		    
+		    <p:dialog header="Teilnehmer suchen" widgetVar="teilnehmerSuchenDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+		        <p:outputPanel id="teilnehmerSuchenDetail" style="text-align:center;">
+		            <p:panelGrid columns="2" rendered="#{not empty dataScrollerView.suchTeilnehmer}" columnClasses="label,value">
+		                <h:outputText value="Nachname:" />
+		                <h:inputText value="#{dataScrollerView.suchTeilnehmer.nachname}" label="Nachname" />
+		 
+		                <h:outputText value="Vorname:" />
+		                <h:inputText value="#{dataScrollerView.suchTeilnehmer.vorname}" label="Vorname" />
+		 
+		                <h:outputText value="Kurs:" />
+		                <h:inputText value="#{dataScrollerView.suchTeilnehmer.kurs}" label="Kurs" />
+		 
+		                <h:outputText value="Rolle:" />
+		                <h:inputText value="#{dataScrollerView.suchTeilnehmer.rolle}" label="Rolle"  />		                
+		            </p:panelGrid>
+		            	                
+		            <p:panelGrid styleClass="ui-noborder" columns="2" rendered="#{not empty dataScrollerView.suchTeilnehmer}" >
+		            	<h:commandButton type="submit" value="Abbrechen" action="#{dataScrollerView.cancelSucheTeilnehmer}" />
+		            	<h:commandButton type="submit" value="Suchen" action="#{dataScrollerView.startSucheTeilnehmer}" />
+		            </p:panelGrid>		                
+		        </p:outputPanel>
+		    </p:dialog>
+
+		</h:form>		
+    </h:body>
+</html>
